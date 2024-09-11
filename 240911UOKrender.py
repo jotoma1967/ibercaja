@@ -1,3 +1,152 @@
+import pip
+
+
+try:
+    from flask import Flask
+
+except ImportError:
+
+    pip.main(["install","Flask"])
+
+    from flask import Flask
+
+try:
+    from flask import  render_template
+except ImportError:
+     
+    pip.main(["install","render_template"])
+
+    from flask import  render_template  
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main240820b__':
+     app.run(debug=True)
+
+@app.route('/')
+def get_data():
+    name1 = 'Alfonso'
+    return render_template('index.html', name1)
+
+
+print("Iniciando")
+
+
+import sys
+import os
+import os.path
+import io
+import string
+import datetime
+import math
+import statistics
+import random
+
+import pip
+
+try:
+     import matplotlib
+
+except ImportError:
+
+    pip.main(["install","matplotlib"])
+
+    import matplotlib
+
+try:
+    import pandas     
+
+except ImportError:
+    pip.main(["install","pandas"])
+    import pandas
+
+
+try:
+    import numpy
+
+except ImportError:
+    pip.main(["install","numpy"])
+    import numpy
+
+try:
+    import requests
+
+except ImportError:
+    pip.main(["install","requests"])
+    import requests
+
+print ("linea 55")
+
+
+
+try:
+    import matplotlib.pyplot
+except ImportError:
+    ##from pip._internal import main as pip
+    pip.main(['install', 'matplotlib.pyplot'])
+    import matplotlib.pyplot
+
+
+try:
+    import dateutil.parser
+
+except ImportError:
+    ##from pip._internal import main as pip
+    pip.main(['install', 'dateutil.parser'])
+    import dateutil.parser
+
+print("linea 75")
+try:
+    import datetime
+except ImportError:
+    ##from pip._internal import main as pip
+    pip(['install', '--user', 'datetime'])
+    import datetime
+
+try:
+    import pathlib
+except ImportError:
+    ##from pip._internal import main as pip
+    pip(['install', '--user', 'pathlib'])
+    import pathlib
+
+try:
+    import os
+except ImportError:
+    ##from pip._internal import main as pip
+    pip(['install', '--user', 'os'])
+    import os
+
+try:
+    import json
+except ImportError:
+    ##from pip._internal import main as pip
+    pip(['install', '--user', 'json'])
+    import json
+
+try:
+    import time
+except ImportError:
+    ##from pip._internal import main as pip
+    pip(['install', '--user', 'time'])
+    import time
+
+try:
+    import pytz
+except ImportError:
+    ##from pip._internal import main as pip
+    pip(['install', '--user', 'pytz'])
+    import pytz
+
+
+
+
+
+
 
 from xml.dom import registerDOMImplementation
 import pandas as pd
@@ -98,6 +247,14 @@ cotizahoypython='C:\\Auxiliares\\cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='C:\\Auxiliares\\resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'C:\\Auxiliares\\tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
+
+archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
+archivotickers ='tickers.csv '
+rhcsv = 'resumenhistoricocsv_JOSE_BOLSA.csv'
+cotizahoypython='cotizahoypy_JOSE_BOLSA.csv'
+resucsv ='resumencsv_JOSE_BOLSA.csv'
+tikercsv = 'tikercsv_JOSE_BOLSA.csv'
+tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
