@@ -256,6 +256,7 @@ resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 
+
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
 
@@ -1056,6 +1057,9 @@ class datos_fon():
                                 
                                 datos_resumen_fon[fon]=lista_datos_fondo
 
+                                print("Fondo","\t\t\t", "Part.", "\t", "Var","\t", "Peso","\t","Acción","\t","Precio")
+                                print("linea 883 ",fon, " ", n_acciones_fondo, " ", valorparticipaciones, " ", valorpesoglobal, " ", datetime.now(), " ", n_acciones_menos2_5, " ", n_acciones_menos1_5, "  acciones +1.5 ", n_acciones_mas1_5) 
+
                 
             lista_datos_fondo =[]
     
@@ -1251,9 +1255,9 @@ class manejarhistorico():
 
         print("linea 1036  imprimientdo iten historico´´´´´´´´´´´´´´")
 
-        for item in itemhistorico:
-            print(item) 
-            print("linea 1040") 
+        ##for item in itemhistorico:
+            ##print(item) 
+            ##print("linea 1040") 
         
        
 
