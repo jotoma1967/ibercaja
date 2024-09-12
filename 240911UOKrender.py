@@ -241,12 +241,13 @@ tikercsv = '/home/jose/Fondos/Auxiliares/tikercsv_AMA_BOLSA.csv'
 
 ##cotizahoypython='C://Auxiliares/cotizahoypy.csv'from
 archivonombresfondos ='C:\\Auxiliares\\nombreFondos_JOSE_BOLSA.csv'
-archivotickers ='C:\\Auxiliares\\tickers.csv '
+archivotickers ='C:\\Auxiliares\\tickers_para_pruebas.csv '
 rhcsv = 'C:\\Auxiliares\\resumenhistoricocsv_JOSE_BOLSA.csv'
 cotizahoypython='C:\\Auxiliares\\cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='C:\\Auxiliares\\resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'C:\\Auxiliares\\tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
+
 
 archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
 archivotickers ='tickers.csv '
@@ -1057,8 +1058,8 @@ class datos_fon():
                                 
                                 datos_resumen_fon[fon]=lista_datos_fondo
 
-                                print("Fondo","\t\t\t", "Part.", "\t", "Var","\t", "Peso","\t","Acción","\t","Precio")
-                                print("linea 883 ",fon, " ", n_acciones_fondo, " ", valorparticipaciones, " ", valorpesoglobal, " ", datetime.now(), " ", n_acciones_menos2_5, " ", n_acciones_menos1_5, "  acciones +1.5 ", n_acciones_mas1_5) 
+                                ##print("Fondo","\t\t\t", "Part.", "\t", "Var","\t", "Peso","\t","Acción","\t","Precio")
+                                print("linea 883 fondo: ",fon, "\t N ", n_acciones_fondo, "\t Porcentaje ", valorparticipaciones, " \t VARIACION ", valorpesoglobal, "\t ", datetime.now(), "\t menos1_5  ", n_acciones_menos2_5, "\t menos1_5 ", n_acciones_menos1_5, "\t  acciones +1.5 ", n_acciones_mas1_5) 
 
                 
             lista_datos_fondo =[]
@@ -1195,7 +1196,7 @@ class manejarhistorico():
                     if   ((datetime.isoweekday(datetime(anoh,mesh,diah)))<6) and datetime(anoh,mesh,diah)<(datetime.today()-timedelta(days=0, seconds=0, microseconds=0,  milliseconds=0, minutes=0, hours=23, weeks=0)):
                         registro = trozoslin[0]+";"+trozoslin[1]+";"+trozoslin[2]+";"+trozoslin[3].replace(',','.')+";"+(trozoslin[4].replace(',','.'))
                         registro = registro ##+";\n"
-                        print("linea 568 ",registro)
+                        ### print("linea 568 ",registro)
                         manejarhistorico.txtlistadohistoricobak.append(registro)
                         ##print("linea 554 ",txtlistadohistoricobak)
                         itemhistorico.append([trozoslin[0],trozoslin[1],trozoslin[2],trozoslin[3],trozoslin[4]])
@@ -1222,7 +1223,7 @@ class manejarhistorico():
         h = open(rhcsv, 'a')
 
         for registro in manejarhistorico.txtlistadohistoricobak:
-            print("linea 609 incorporando viejos rhcsv ", registro)
+            ##print("linea 609 incorporando viejos rhcsv ", registro)
             ll=h.write(registro)##+";\n")
             #print("576 ", ll)
             ##print("642",registro)
