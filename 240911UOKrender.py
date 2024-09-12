@@ -238,6 +238,18 @@ rhcsv = '/home/jose/Fondos/Auxiliares/resumenhistoricocsv_AMA_BOLSA.csv'
 cotizahoypython='/home/jose/Fondos/Auxiliares/cotizahoypy_AMA_BOLSA.csv'
 resucsv ='/home/jose/Fondos/Auxiliares/resumencsv_AMA_BOLSA.csv'
 tikercsv = '/home/jose/Fondos/Auxiliares/tikercsv_AMA_BOLSA.csv'
+tickers_no_hallados = '/home/jose/Fondos/Auxiliares/tickers_no_hallados_JOSE_BOLSA.csv'
+
+
+archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_JOSE_BOLSA.csv'
+archivotickers ='/home/jose/Fondos/Auxiliares/tickers.csv'
+rhcsv = '/home/jose/Fondos/Auxiliares/resumenhistoricocsv_JOSE_BOLSA.csv'
+cotizahoypython='/home/jose/Fondos/Auxiliares/cotizahoypy_JOSE_BOLSA.csv'
+resucsv ='/home/jose/Fondos/Auxiliares/resumencsv_JOSE_BOLSA.csv'
+tikercsv = '/home/jose/Fondos/Auxiliares/tikercsv_JOSE_BOLSA.csv'
+tickers_no_hallados = '/home/jose/Fondos/Auxiliares/tickers_no_hallados_JOSE_BOLSA.csv'
+
+''''
 
 ##cotizahoypython='C://Auxiliares/cotizahoypy.csv'from
 archivonombresfondos ='C:\\Auxiliares\\nombreFondos_JOSE_BOLSA.csv'
@@ -256,7 +268,7 @@ cotizahoypython='cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
-
+'''
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
@@ -1516,7 +1528,7 @@ class mainje():
             print(momentofinalizacion)
 
             datosderesumencsv = pd.read_csv( resucsv, header =0,  sep=';',decimal='.', encoding='ISO-8859-1')
-
+            print("linea 1531")
             print(datosderesumencsv)
 
             #input("873")
