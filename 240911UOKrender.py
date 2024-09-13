@@ -238,17 +238,6 @@ rhcsv = '/home/jose/Fondos/Auxiliares/resumenhistoricocsv_AMA_BOLSA.csv'
 cotizahoypython='/home/jose/Fondos/Auxiliares/cotizahoypy_AMA_BOLSA.csv'
 resucsv ='/home/jose/Fondos/Auxiliares/resumencsv_AMA_BOLSA.csv'
 tikercsv = '/home/jose/Fondos/Auxiliares/tikercsv_AMA_BOLSA.csv'
-tickers_no_hallados = '/home/jose/Fondos/Auxiliares/tickers_no_hallados_JOSE_BOLSA.csv'
-
-
-archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_JOSE_BOLSA.csv'
-archivotickers ='/home/jose/Fondos/Auxiliares/tickers.csv'
-rhcsv = '/home/jose/Fondos/Auxiliares/resumenhistoricocsv_JOSE_BOLSA.csv'
-cotizahoypython='/home/jose/Fondos/Auxiliares/cotizahoypy_JOSE_BOLSA.csv'
-resucsv ='/home/jose/Fondos/Auxiliares/resumencsv_JOSE_BOLSA.csv'
-tikercsv = '/home/jose/Fondos/Auxiliares/tikercsv_JOSE_BOLSA.csv'
-tickers_no_hallados = '/home/jose/Fondos/Auxiliares/tickers_no_hallados_JOSE_BOLSA.csv'
-
 
 ##cotizahoypython='C://Auxiliares/cotizahoypy.csv'from
 archivonombresfondos ='C:\\Auxiliares\\nombreFondos_JOSE_BOLSA.csv'
@@ -259,7 +248,7 @@ resucsv ='C:\\Auxiliares\\resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'C:\\Auxiliares\\tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
 
-
+'''
 archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
 archivotickers ='tickers.csv '
 rhcsv = 'resumenhistoricocsv_JOSE_BOLSA.csv'
@@ -267,7 +256,7 @@ cotizahoypython='cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
-
+'''
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
@@ -1070,7 +1059,9 @@ class datos_fon():
                                 datos_resumen_fon[fon]=lista_datos_fondo
 
                                 ##print("Fondo","\t\t\t", "Part.", "\t", "Var","\t", "Peso","\t","Acción","\t","Precio")
-                                print("linea 883 fondo: ",fon, "\t N ", n_acciones_fondo, "\t Porcentaje ", valorparticipaciones, " \t VARIACION ", valorpesoglobal, "\t ", datetime.now(), "\t menos1_5  ", n_acciones_menos2_5, "\t menos1_5 ", n_acciones_menos1_5, "\t  acciones +1.5 ", n_acciones_mas1_5) 
+                                print("linea 1062 fondo: ",fon, "\t Var: ", valorpesoglobal, "\t N ", n_acciones_fondo, "\t Porcentaje ", valorparticipaciones)
+                                print("linea 1063 VARIACION ", datetime.now(), "\t menos1_5  ", n_acciones_menos2_5, "\t menos1_5 ", n_acciones_menos1_5, "\t  acciones +1.5 ", n_acciones_mas1_5)
+                                print("linea 1064 -2.5:", round(float(n_acciones_menos2_5/n_acciones_fondo),2), " -1.5:", round(float(n_acciones_menos1_5/n_acciones_fondo),2), " +1.5: ", round(float(n_acciones_mas1_5/n_acciones_fondo),2))  
 
                 
             lista_datos_fondo =[]
@@ -1527,7 +1518,7 @@ class mainje():
             print(momentofinalizacion)
 
             datosderesumencsv = pd.read_csv( resucsv, header =0,  sep=';',decimal='.', encoding='ISO-8859-1')
-            print("linea 1531")
+
             print(datosderesumencsv)
 
             #input("873")
