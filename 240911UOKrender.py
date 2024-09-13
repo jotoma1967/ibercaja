@@ -248,7 +248,7 @@ resucsv ='C:\\Auxiliares\\resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'C:\\Auxiliares\\tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
 
-
+'''
 archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
 archivotickers ='tickers.csv '
 rhcsv = 'resumenhistoricocsv_JOSE_BOLSA.csv'
@@ -256,7 +256,7 @@ cotizahoypython='cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
-
+'''
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
@@ -1060,7 +1060,7 @@ class datos_fon():
 
                                 ##print("Fondo","\t\t\t", "Part.", "\t", "Var","\t", "Peso","\t","Acción","\t","Precio")
                                 print("linea 1062 fondo: ",fon, "\t Var: ", valorpesoglobal, "\t N ", n_acciones_fondo, "\t Porcentaje ", valorparticipaciones)
-                                print("linea 1063 VARIACION ", datetime.now(), "\t menos1_5  ", n_acciones_menos2_5, "\t menos1_5 ", n_acciones_menos1_5, "\t  acciones +1.5 ", n_acciones_mas1_5)
+                                print("linea 1063 ", datetime.now(), "\t menos1_5  ", n_acciones_menos2_5, "\t menos1_5 ", n_acciones_menos1_5, "\t  acciones +1.5 ", n_acciones_mas1_5)
                                 print("linea 1064 -2.5:", round(float(n_acciones_menos2_5/n_acciones_fondo),2), " -1.5:", round(float(n_acciones_menos1_5/n_acciones_fondo),2), " +1.5: ", round(float(n_acciones_mas1_5/n_acciones_fondo),2))  
 
                 
