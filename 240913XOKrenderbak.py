@@ -8,7 +8,7 @@ try:
 
 except ImportError:
 
-    pip.main(["install","cryptografy"])
+    pip.main(["install","cryptography"])
 
     import cryptography
 
