@@ -276,7 +276,7 @@ cotizahoypython='C:\\Auxiliares\\cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='C:\\Auxiliares\\resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'C:\\Auxiliares\\tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
-'''
+
 
 archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
 archivotickers ='tickers.csv'
