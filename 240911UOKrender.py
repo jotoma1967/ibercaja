@@ -1583,4 +1583,13 @@ result = subprocess.run(['ls', '-la'], capture_output=True, text=True)
 print(result.stdout)
 
 
-   
+print("linea 1586 leyendo csv")
+
+import pandas as pd
+
+# Leer el archivo CSV
+df = pd.read_csv('aresumencsvcsv')
+
+# Mostrar el contenido del DataFrame
+print(df)
+  
