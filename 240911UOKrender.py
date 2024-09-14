@@ -250,7 +250,7 @@ tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
 '''
 
 archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
-archivotickers ='tickers.csv '
+archivotickers ='tickers.csv'
 rhcsv = 'resumenhistoricocsv_JOSE_BOLSA.csv'
 cotizahoypython='cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='resumencsv_JOSE_BOLSA.csv'
