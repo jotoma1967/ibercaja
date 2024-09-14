@@ -174,7 +174,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('../')
 def home():
     variable = "¡Hola, mundo!"
     return render_template('index.html', variable=variable)
@@ -203,8 +203,10 @@ class User(db.Model, UserMixin):
                          nullable=False)
     def __repr__(self):
         return '<User {}>'.format(self.username)
-
 '''
+# ejecutar class User(db.Model, UserMixin):
+# ejecutar db.create_all() para crear la tabla en la base de datos
+
 
 
 
