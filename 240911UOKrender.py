@@ -169,6 +169,7 @@ from pathlib import Path
 
 ##prueba de aplicación flask
 
+''' descomentar es ok
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -176,12 +177,12 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     variable = "¡Hola, mundo!"
-    return render_template('../index.html', variable=variable)
+    return render_template('index.html', variable=variable)
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-
+'''
 
 
 
