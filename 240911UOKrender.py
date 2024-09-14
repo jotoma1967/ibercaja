@@ -280,7 +280,7 @@ for filename in myFiles:
         fil.close()
     
     
-    result = subprocess.run([chmod -R 777 filename], capture_output=True, text=True)
+    result = subprocess.run([chmod  777 filename], capture_output=True, text=True)
     print("linea 284 ****************")
 # Imprimir la salida del comando
     print(result.stdout)
