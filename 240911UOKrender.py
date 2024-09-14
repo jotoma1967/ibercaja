@@ -230,7 +230,7 @@ fonvariacion={}
 
 
 
-
+'''
 
 archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_AMA_BOLSA.csv'
 archivotickers ='/home/jose/Fondos/Auxiliares/tickers_AMA_BOLSA.csv'
@@ -247,8 +247,8 @@ cotizahoypython='C:\\Auxiliares\\cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='C:\\Auxiliares\\resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'C:\\Auxiliares\\tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'C:\\Auxiliares\\tickers_no_hallados_JOSE_BOLSA.csv'
-
 '''
+
 archivonombresfondos ='nombreFondos_JOSE_BOLSA.csv'
 archivotickers ='tickers.csv '
 rhcsv = 'resumenhistoricocsv_JOSE_BOLSA.csv'
@@ -256,9 +256,9 @@ cotizahoypython='cotizahoypy_JOSE_BOLSA.csv'
 resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
-'''
+prueba= "prueba2409131858.csv"
 
-myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
+myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados, prueba] 
 for filename in myFiles:
 
     if not os.path.exists(filename):
