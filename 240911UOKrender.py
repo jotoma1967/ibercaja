@@ -200,7 +200,7 @@ diahoy = date.today().isoformat()
 momentohoy = str(datetime.now())
 numdiasemana=date.fromisoformat(diahoy).isoweekday() #del 1 lunes a 7 domingo
 
-sabadoodomingo =  date.fromisoformat(diahoy).isoweekday()>5 ##>5
+sabadoodomingo =  False #date.fromisoformat(diahoy).isoweekday()>5 ##>5
 
 #print(numdiasemana)
 #print(momentohoy)
