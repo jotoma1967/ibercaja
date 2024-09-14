@@ -1588,7 +1588,7 @@ print("linea 1586 leyendo csv")
 import pandas as pd
 
 # Leer el archivo CSV
-df = pd.read_csv('aresumencsvcsv')
+df = pd.read_csv('resumencsv.csv')
 
 # Mostrar el contenido del DataFrame
 print(df)
