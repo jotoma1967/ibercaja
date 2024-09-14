@@ -170,33 +170,7 @@ from pathlib import Path
 ##prueba de aplicación flask
 
 # descomentar es ok
-'''
-from flask import Flask, render_template
 
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    variable = "¡Hola, mundo!"
-    return render_template('/index.html', variable=variable)
-
-@app.route('/')
-def home():
-    variable = "¡Hola, home!"
-    return render_template('index.html',variable = variable)    
-
-@app.route('/templates')
-def subdirectory():
-    variable="¡Hola, mundo!"
-    return render_template('templates/index.html',variable=variable)
-
-if __name__ == '__main__':
-    #app.run(debug=True)
-    app.run(debug=True, port=5002)
-
-#traspasar una varialbe a un template de flask
-
-'''
 class User(db.Model, UserMixin):
     """Model for user accounts."""
     __tablename__ = 'users'
