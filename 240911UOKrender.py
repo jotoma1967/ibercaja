@@ -166,6 +166,26 @@ from datetime import time
 import pytz
 from pathlib import Path
 
+##prueba de aplicación flask
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    variable = "¡Hola, mundo!"
+    return render_template('index.html', variable=variable)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+
+
 newYorkTz = pytz.timezone("America/New_York") 
 timeInNewYork = datetime.now(newYorkTz)
 currentTimeInNewYork = timeInNewYork.strftime("%H:%M:%S")
@@ -231,7 +251,6 @@ fonvariacion={}
 
 
 
-'''
 archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_AMA_BOLSA.csv'
 archivotickers ='/home/jose/Fondos/Auxiliares/tickers_AMA_BOLSA.csv'
 rhcsv = '/home/jose/Fondos/Auxiliares/resumenhistoricocsv_AMA_BOLSA.csv'
@@ -257,6 +276,7 @@ resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 prueba= "prueba2409131858.csv"
+'''
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
