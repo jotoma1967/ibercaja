@@ -298,10 +298,10 @@ for filename in myFiles:
 
 
 # Ejecutar el comando 'ls -la'
-result = subprocess.run([chmod -R 777 filename], capture_output=True, text=True)
+###result = subprocess.run([chmod -R 777 filename], capture_output=True, text=True)
 
 # Imprimir la salida del comando
-print(result.stdout)
+##print(result.stdout)
 
 
 
