@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+      <input id="myId" type="text"></input>
+      <button onClick="console.log(document.getElementById('myId').value)">Get Text</button>
+      <h1>Ejemplo de Confirmación</h1>
+    <button onclick="mostrarConfirmacion()">Haz clic aquí</button>
 
+    <script>
+        function mostrarConfirmacion() {
+            // Mostramos un diálogo de confirmación
+            var respuesta = confirm("¿Estás seguro de que quieres continuar?");
+
+            // Verificamos la respuesta del usuario
+            if (respuesta) {
+                alert("Has elegido continuar.");
+            } else {
+                alert("Has cancelado la acción.");
+            }
+        }
+    </script>
+
+    {{ variable }} 
+    
+
+     </body>
+</html>
