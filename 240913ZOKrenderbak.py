@@ -181,19 +181,16 @@ def home():
     return render_template('/index.html', variable=variable)
 
 
-@app.route('/')
-def home():
-    variable = "¡Hola, home!"
-    return render_template('index.html',variable = variable)    
+ 
 
 @app.route('/templates')
 def subdirectory():
-    variable="¡Hola, mundo!"
+    variable="¡Hola, templates!"
     return render_template('templates/index.html',variable=variable)
 
 if __name__ == '__main__':
     #app.run(debug=True)
-    app.run(debug=True, https://ibercaja.onrender.com, port=5001)
+    app.run(debug=True, host ='https://ibercaja.onrender.com')
 
 import requests
 
