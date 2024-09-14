@@ -169,7 +169,7 @@ from pathlib import Path
 
 ##prueba de aplicación flask
 
-''' descomentar es ok
+# descomentar es ok
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -182,9 +182,29 @@ def home():
 if __name__ == '__main__':
     app.run(debug=True)
 
+#traspasar una varialbe a un template de flask
+
 '''
+class User(db.Model, UserMixin):
+    """Model for user accounts."""
+    __tablename__ = 'users'
 
+    id = db.Column(db.Integer,
+                   primary_key=True)
+    username = db.Column(db.String,
+                         nullable=False,
+                         unique=False)
+    email = db.Column(db.String(40),
+                      unique=True,
+                      nullable=False)
+    password = db.Column(db.String(200),
+                         primary_key=False,
+                         unique=False,
+                         nullable=False)
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
 
+'''
 
 
 
