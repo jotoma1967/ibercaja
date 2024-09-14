@@ -230,8 +230,8 @@ fonvariacion={}
 
 
 
-'''
 
+'''
 archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_AMA_BOLSA.csv'
 archivotickers ='/home/jose/Fondos/Auxiliares/tickers_AMA_BOLSA.csv'
 rhcsv = '/home/jose/Fondos/Auxiliares/resumenhistoricocsv_AMA_BOLSA.csv'
@@ -258,7 +258,7 @@ tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 prueba= "prueba2409131858.csv"
 
-myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados, prueba] 
+myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
 
     if not os.path.exists(filename):
@@ -887,8 +887,8 @@ class datos_fon():
             for dacci in list_dacci:
                 nueveymedia_list_dacci.append(dacci)
 
-        ##print(nueveymedia_list_dacci) 
-        ##input("642")       
+        print(nueveymedia_list_dacci) 
+        print("891")       
             
         numerodeaccion=1
 
