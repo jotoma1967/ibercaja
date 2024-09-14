@@ -167,6 +167,8 @@ from datetime import time
 import pytz
 from pathlib import Path
 
+import subprocess
+
 ##prueba de aplicación flask
 
 # descomentar es ok
@@ -277,9 +279,31 @@ for filename in myFiles:
         fil=open(filename, 'w')
         fil.close()
     
+    
+    result = subprocess.run([chmod -R 777 filename], capture_output=True, text=True)
+    print("linea 284 ****************")
+# Imprimir la salida del comando
+    print(result.stdout)
+
+
     tnh = open(tickers_no_hallados, 'w')
     tnh.close()
-    
+
+
+
+# Ejecutar el comando 'ls -la'
+result = subprocess.run([chmod -R 777 filename], capture_output=True, text=True)
+
+# Imprimir la salida del comando
+print(result.stdout)
+
+
+
+# Ejecutar el comando 'ls -la'
+result = subprocess.run(['ls', '-la'], capture_output=True, text=True)
+
+# Imprimir la salida del comando
+print(result.stdout)
 class construirtikercvs():
 
     def cabeceratikercsv(self):
