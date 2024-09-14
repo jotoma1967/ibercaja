@@ -1066,7 +1066,10 @@ class datos_fon():
                                 ##print("Fondo","\t\t\t", "Part.", "\t", "Var","\t", "Peso","\t","Acción","\t","Precio")
                                 print("linea 1062 fondo: ",fon, "\t Var: ", valorpesoglobal, "\t N ", n_acciones_fondo, "\t Porcentaje ", valorparticipaciones)
                                 print("linea 1063 ", datetime.now(), "\t menos1_5  ", n_acciones_menos2_5, "\t menos1_5 ", n_acciones_menos1_5, "\t  acciones +1.5 ", n_acciones_mas1_5)
-                                print("linea 1064 -2.5:", round(float(n_acciones_menos2_5/n_acciones_fondo),2), " -1.5:", round(float(n_acciones_menos1_5/n_acciones_fondo),2), " +1.5: ", round(float(n_acciones_mas1_5/n_acciones_fondo),2))  
+                                if n_acciones_fondo <= 0:
+                                    print("linea 1064 -2.5:", round(float(n_acciones_menos2_5/1),2), " -1.5:", round(float(n_acciones_menos1_5/1),2), " +1.5: ", round(float(n_acciones_mas1_5/1),2))
+                                else:
+                                    print("linea 1064 -2.5:", round(float(n_acciones_menos2_5/n_acciones_fondo),2), " -1.5:", round(float(n_acciones_menos1_5/n_acciones_fondo),2), " +1.5: ", round(float(n_acciones_mas1_5/n_acciones_fondo),2))  
 
                 
             lista_datos_fondo =[]
