@@ -171,25 +171,6 @@ from pathlib import Path
 
 # descomentar es ok
 
-class User(db.Model, UserMixin):
-    """Model for user accounts."""
-    __tablename__ = 'users'
-
-    id = db.Column(db.Integer,
-                   primary_key=True)
-    username = db.Column(db.String,
-                         nullable=False,
-                         unique=False)
-    email = db.Column(db.String(40),
-                      unique=True,
-                      nullable=False)
-    password = db.Column(db.String(200),
-                         primary_key=False,
-                         unique=False,
-                         nullable=False)
-    def __repr__(self):
-        return '<User {}>'.format(self.username)
-'''
 # ejecutar class User(db.Model, UserMixin):
 # ejecutar db.create_all() para crear la tabla en la base de datos
 
@@ -259,7 +240,6 @@ contador = 0
 fonvariacion={}
 
 
-'''
 
 archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_AMA_BOLSA.csv'
 archivotickers ='/home/jose/Fondos/Auxiliares/tickers_AMA_BOLSA.csv'
