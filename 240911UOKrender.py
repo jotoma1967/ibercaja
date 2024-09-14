@@ -176,7 +176,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     variable = "¡Hola, mundo!"
-    return render_template('index.html', variable=variable)
+    return render_template('../index.html', variable=variable)
 
 if __name__ == '__main__':
     app.run(debug=True)
@@ -277,6 +277,7 @@ resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 prueba= "prueba2409131858.csv"
+
 
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
