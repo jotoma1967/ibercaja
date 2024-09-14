@@ -1567,4 +1567,20 @@ if False: ##numdiasemana>5: ## el fin de semana no se actualiza
 cl= mainje()
 cl.maindef()
 
+import os
+
+# Obtener el directorio actual
+directorio_actual = os.getcwd()
+
+print(directorio_actual)
+
+import subprocess
+
+# Ejecutar el comando 'ls -la'
+result = subprocess.run(['ls', '-la'], capture_output=True, text=True)
+
+# Imprimir la salida del comando
+print(result.stdout)
+
+
    
