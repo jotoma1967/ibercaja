@@ -1050,9 +1050,14 @@ class datos_fon():
                                 lista_datos_fondo.append(n_acciones_mas1_5) 
                                 ##print("linea 880 ",n_acciones_fondo, " ", valorparticipaciones, " ", valorpesoglobal, " ", datetime.now(), " ", n_acciones_menos2_5, " ", n_acciones_menos1_5, "  acciones +1.5 ", n_acciones_mas1_5)
                                 ##input("linea 880")
-                                lista_datos_fondo.append(round(float(n_acciones_menos2_5/n_acciones_fondo),2))
-                                lista_datos_fondo.append(round(float(n_acciones_menos1_5/n_acciones_fondo),2))  
-                                lista_datos_fondo.append(round(float(n_acciones_mas1_5/n_acciones_fondo),2))
+                                if n_acciones_fondo <= 0:
+                                    lista_datos_fondo.append(round(float(n_acciones_menos2_5/1),2))
+                                    lista_datos_fondo.append(round(float(n_acciones_menos1_5/1),2))  
+                                    lista_datos_fondo.append(round(float(n_acciones_mas1_5/1),2))
+                                else:
+                                    lista_datos_fondo.append(round(float(n_acciones_menos2_5/n_acciones_fondo),2))
+                                    lista_datos_fondo.append(round(float(n_acciones_menos1_5/n_acciones_fondo),2))  
+                                    lista_datos_fondo.append(round(float(n_acciones_mas1_5/n_acciones_fondo),2))
 
 
                                 
