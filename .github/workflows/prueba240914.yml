@@ -1,0 +1,52 @@
+#rea un archivo de flujo de trabajo en .github/workflows/ en tu repositorio principal. 
+'''
+Crear un nuevo repositorio:
+Si aún no tienes un repositorio para tu página HTML, crea uno nuevo en GitHub.
+Configurar GitHub Pages:
+Ve a la configuración del repositorio (Settings).
+En la sección “Pages”, selecciona la rama y la carpeta desde donde deseas publicar tu sitio (por ejemplo, main y /docs).
+Configurar GitHub Actions:
+Crea un archivo de flujo de trabajo en .github/workflows/ en tu repositorio principal. Este archivo definirá las acciones necesarias para clonar el otro repositorio y publicar el contenido HTML.
+Aquí tienes un ejemplo de flujo de trabajo:
+'''
+name: Deploy to GitHub Pages
+name: Deploy HTML from another repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v2
+
+    - name: Checkout the other repository
+      uses: actions/checkout@v2
+      with:
+        repository: jotoma1967/ibercaja_submodulo ##usuario/otro-repositorio
+        path: https://github.com/jotoma1967/ibercaja_submodulo ##otro-repositorio
+
+    - name: Copy HTML files
+      run: cp -r otro-repositorio/ruta/a/html/* ./docs/
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add .
+        git commit -m 'Deploy HTML from another repo'
+        git push
+
+'''
+Personalizar el flujo de trabajo:
+Asegúrate de reemplazar usuario/otro-repositorio con el nombre del usuario y el repositorio que deseas clonar.
+Ajusta la ruta otro-repositorio/ruta/a/html/* según la ubicación de tus archivos HTML en el otro repositorio.
+Habilitar GitHub Actions:
+Asegúrate de que GitHub Actions esté habilitado en tu repositorio. Puedes verificar esto en la configuración del repositorio bajo la sección “Actions”.
+Este flujo de trabajo clonará el otro repositorio, copiará los archivos HTML a la carpeta /docs de tu repositorio principal y luego los publicará usando GitHub Pages12
+'''
