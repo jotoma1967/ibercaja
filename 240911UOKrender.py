@@ -18,6 +18,7 @@ except ImportError:
 
     from flask import  render_template  
 
+'''
 app = Flask(__name__)
 
 @app.route('/')
@@ -32,7 +33,7 @@ def get_data():
     name1 = 'Alfonso'
     return render_template('index.html', name1)
 
-
+'''
 print("Iniciando")
 
 
@@ -249,7 +250,7 @@ contador = 0
 fonvariacion={}
 
 
-
+'''
 
 archivonombresfondos ='/home/jose/Fondos/Auxiliares/nombreFondos_AMA_BOLSA.csv'
 archivotickers ='/home/jose/Fondos/Auxiliares/tickers_AMA_BOLSA.csv'
@@ -276,7 +277,7 @@ resucsv ='resumencsv_JOSE_BOLSA.csv'
 tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 prueba= "prueba2409131858.csv"
-'''
+
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
 for filename in myFiles:
