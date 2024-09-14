@@ -177,7 +177,16 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     variable = "¡Hola, mundo!"
-    return render_template('../index.html', variable=variable)
+    return render_template('/index.html', variable=variable)
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/templates')
+def subdirectory():
+    return render_template('templates/index.html')
 
 if __name__ == '__main__':
     #app.run(debug=True)
