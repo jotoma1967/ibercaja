@@ -279,11 +279,17 @@ for filename in myFiles:
         fil=open(filename, 'w')
         fil.close()
     
+   
+# Especifica la ruta del archivo
+    ruta_archivo = filename ##'mi_archivo.txt'
     
-    result = subprocess.run([chmod  777 filename], capture_output=True, text=True)
-    print("linea 284 ****************")
-# Imprimir la salida del comando
-    print(result.stdout)
+# Especifica los permisos deseados en formato octal
+# Por ejemplo, 0o755 significa permisos de lectura, escritura, y ejecución para el propietario,
+# y permisos de lectura y ejecución para el grupo y otros.
+    permisos = 0o777
+
+# Cambiar los permisos del archivo
+    os.chmod(ruta_archivo, permisos)
 
 
     tnh = open(tickers_no_hallados, 'w')
@@ -1591,7 +1597,7 @@ if False: ##numdiasemana>5: ## el fin de semana no se actualiza
 cl= mainje()
 cl.maindef()
 
-import os
+
 
 # Obtener el directorio actual
 directorio_actual = os.getcwd()
