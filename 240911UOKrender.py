@@ -269,6 +269,15 @@ tikercsv = 'tikercsv_JOSE_BOLSA.csv'
 tickers_no_hallados = 'tickers_no_hallados_JOSE_BOLSA.csv'
 prueba= "prueba2409131858.csv"
 
+archivonombresfondos ='nombreFondos.csv'
+archivotickers ='tickers.csv'
+lrhcsv = 'resumenhistoricocsv.csv'
+cotizahoypython='cotizahoypy.csv'
+resucsv ='resumencsv.csv'
+tikercsv = 'tikercsv.csv'
+tickers_no_hallados = 'tickers_no_hallados.csv'
+prueba= "prueba2409131858.csv"
+
 
 
 myFiles = [archivonombresfondos, archivotickers, rhcsv,cotizahoypython,resucsv,tikercsv, tickers_no_hallados] 
